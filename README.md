@@ -1,5 +1,5 @@
 # EFK-Stack-Demo
-Elasticsearch, Fluentd and Kibana (EFK) Dema on Ubuntu installed on VirtualBox
+Elasticsearch, Fluentd and Kibana (EFK) Demo on Ubuntu installed on VirtualBox
 
 
 ### OS Requirement
