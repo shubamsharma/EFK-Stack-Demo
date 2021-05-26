@@ -41,7 +41,9 @@ elasticsearch.hosts: ["http://localhost:9200"]
 ****
 Default host url for Kibana - http://localhost:5601
 
-
+### Fluentd
+You can check with status on fluentd using below command
+***sudo service td-agent status
 
 
 
