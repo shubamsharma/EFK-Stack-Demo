@@ -8,32 +8,32 @@ Windows or Linux (Using ubuntu OS installed on Oracle Virtual Box)
 ## Setup required : 
 ### - Java installation is mandatory 
 
-#### - Python installation
+### - Python installation
 For writing program which will generate log that can be viewed in kibana
 
-#### - Curl 
+### - Curl 
 sudo apt install curl
 
-#### - Elastic Search 
+### - Elastic Search 
 Download Elastics Search from https://www.elastic.co/downloads/elasticsearch - Used version 7.12.1 <br />
 Unzip the file in download section (You can choose any location but make sure you accordingly update the path in execute.sh) 
 
-#### - Kibana
+### - Kibana
 Download Elastics Search from https://www.elastic.co/downloads/elasticsearch - Used version 7.12.1 <br />
 (Make sure you use the same version of elastic search and kibana
 
-#### - Fluentd
+### - Fluentd
 curl -L https://toolbelt.treasuredata.com/sh/install-ubuntu-trusty-td-agent3.sh | sh <br />
 sudo apt-get install make libcurl4-gnutls-dev --yes <br />
 sudo apt-get install build-essential <br />
 sudo /opt/td-agent/embedded/bin/fluent-gem install fluent-plugin-elasticsearch
 
 
-### Configuration Required
-#### - Elastic Search  
+## Configuration Required
+### - Elastic Search  
 No change required (Default host url - http://localhost:9200)
 
-#### - Kibana
+### - Kibana
 Make sure you use the same host on which the elastic search is running (Default is correct just uncomment it)
 ****
 The URLs of the Elasticsearch instances to use for all your queries.
@@ -41,14 +41,14 @@ elasticsearch.hosts: ["http://localhost:9200"]
 ****
 Default host url for Kibana - http://localhost:5601
 
-#### - Fluentd
+### - Fluentd
 You can check with status on fluentd using below command <br />
 <i>sudo service td-agent status</i>
 
 Update /etc/td-agent/td-agent.conf file (This file will have configuration for source and match) <br />
 Have also attached the used configuration.
 
-### Run 
+## Run 
 Start Elastic Search service <br />
 ./[UnzipFilePath]/bin/elasticsearch
 
