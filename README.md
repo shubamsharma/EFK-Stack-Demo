@@ -19,11 +19,11 @@ Download Elastics Search from https://www.elastic.co/downloads/elasticsearch - U
 Unzip the file in download section (You can choose any location but make sure you accordingly update the path in execute.sh) 
 
 ### - Kibana
-Download Elastics Search from https://www.elastic.co/downloads/elasticsearch - Used version 7.12.1 <br />
+Download Kibana from https://www.elastic.co/downloads/elasticsearch - Used version 7.12.1 <br />
 (Make sure you use the same version of elastic search and kibana
 
 ### - Logstash
-Download Elastics Search from https://www.elastic.co/downloads/logstash - Used version 7.12.1 <br />
+Download Logstash from https://www.elastic.co/downloads/logstash - Used version 7.12.1 <br />
 (Make sure you use the same version of elastic search, kibana and Logstash)
 
 ## Configuration Required
