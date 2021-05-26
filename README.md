@@ -36,7 +36,7 @@ No change required (Default host url - http://localhost:9200)
 ### - Kibana
 Make sure you use the same host on which the elastic search is running (Default is correct just uncomment it)
 ****
-The URLs of the Elasticsearch instances to use for all your queries.
+The URLs of the Elasticsearch instances to use for all your queries. <br />
 elasticsearch.hosts: ["http://localhost:9200"]
 ****
 Default host url for Kibana - http://localhost:5601
@@ -71,5 +71,5 @@ Execute below command to do all the above steps through shell <br />
 sudo bash execute.sh "[Python File]" "[Log Path]"
 
 
-
+Credits - https://www.youtube.com/watch?v=dgxEY6V5gtc
 
