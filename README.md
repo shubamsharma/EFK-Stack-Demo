@@ -3,10 +3,10 @@ Elasticsearch, Fluentd and Kibana (EFK) Demo on Ubuntu installed on VirtualBox
 
 
 ### OS Requirement
-- Windows or Linux (Using ubuntu OS installed on Oracle Virtual Box)
+Windows or Linux (Using ubuntu OS installed on Oracle Virtual Box)
 
 ### Setup required : 
-#### Java installation is mandatory 
+#### - Java installation is mandatory 
 
 #### Python installation
 For writing program which will generate log that can be viewed in kibana
