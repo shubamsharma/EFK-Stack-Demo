@@ -30,6 +30,17 @@ sudo /opt/td-agent/embedded/bin/fluent-gem install fluent-plugin-elasticsearch
 
 
 ### Configuration Required :
+#### Elastic Search  
+No change required (Default host url - http://localhost:9200)
+
+#### Kibana
+Make sure you use the same host on which the elastic search is running (Default is correct just uncomment it)
+****
+The URLs of the Elasticsearch instances to use for all your queries.
+elasticsearch.hosts: ["http://localhost:9200"]
+****
+Default host url for Kibana - http://localhost:5601
+
 
 
 
