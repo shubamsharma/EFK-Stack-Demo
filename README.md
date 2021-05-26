@@ -22,9 +22,12 @@ Unzip the file in download section (You can choose any location but make sure yo
 Download Kibana from https://www.elastic.co/downloads/elasticsearch - Used version 7.12.1 <br />
 (Make sure you use the same version of elastic search and kibana
 
-### - Logstash
-Download Logstash from https://www.elastic.co/downloads/logstash - Used version 7.12.1 <br />
-(Make sure you use the same version of elastic search, kibana and Logstash)
+### - FluentD
+Follow steps mentioned below
+1. curl -L https://toolbelt.treasuredata.com/sh3install-ubuntu-trusty-td-agent3.sh | sh
+2. sudo apt-get install make libcurl4-gnutls-dev --yes
+3. sudo apt-get install build-essential
+4. sudo /opt/td-agent/embedded/bin/fluent-gem install fluent-plugin-elasticsearch
 
 ## Configuration Required
 ### - Elastic Search  
@@ -40,7 +43,7 @@ Default host url for Kibana - http://localhost:5601
 
 ### - Fluentd
 
-Create config file logstash_file.conf (This file will have configuration for input, filter and output) <br />
+Update config file /etc/td-agent/td-agent.conf (This file will have configuration for source and match) <br />
 Have also attached the used configuration.
 
 ## Run 
@@ -50,7 +53,16 @@ Start Elastic Search service <br />
 Start Kibana service <br />
 ./[UnzipFilePath]/bin/kibana
 
-./[UnzipFilePath]/bin/logstash -r -f [ConfigFileCreatedAbove] # Need to attach the configuration with the logstach<br /> 
+Start fluentd service <br />
+sudo service td-agent start
+
+******
+  Some other used commands
+  sudo service td-agent start
+  sudo service td-agent stop
+  sudo service td-agent restart
+  sudo service td-agent status
+  sudo tail -f /var/log/td-agent/td-agent.log
 
 Execute below command to do all the above steps through shell <br />
-sudo bash execute_logstash.sh "[Python File]" "[Full Log Path]" ["Config File Created Above"]
+sudo bash execute.sh "[Python File]" "[Log File Path]"
