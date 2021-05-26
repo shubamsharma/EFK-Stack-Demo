@@ -43,7 +43,7 @@ Default host url for Kibana - http://localhost:5601
 
 ### Fluentd
 You can check with status on fluentd using below command <br />
-***sudo service td-agent status
+<i>sudo service td-agent status</i>
 
 
 
