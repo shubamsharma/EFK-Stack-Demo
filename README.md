@@ -22,12 +22,9 @@ Unzip the file in download section (You can choose any location but make sure yo
 Download Elastics Search from https://www.elastic.co/downloads/elasticsearch - Used version 7.12.1 <br />
 (Make sure you use the same version of elastic search and kibana
 
-### - Fluentd
-curl -L https://toolbelt.treasuredata.com/sh/install-ubuntu-trusty-td-agent3.sh | sh <br />
-sudo apt-get install make libcurl4-gnutls-dev --yes <br />
-sudo apt-get install build-essential <br />
-sudo /opt/td-agent/embedded/bin/fluent-gem install fluent-plugin-elasticsearch
-
+### - Logstash
+Download Elastics Search from https://www.elastic.co/downloads/logstash - Used version 7.12.1 <br />
+(Make sure you use the same version of elastic search, kibana and Logstash)
 
 ## Configuration Required
 ### - Elastic Search  
@@ -42,10 +39,8 @@ elasticsearch.hosts: ["http://localhost:9200"]
 Default host url for Kibana - http://localhost:5601
 
 ### - Fluentd
-You can check with status on fluentd using below command <br />
-<i>sudo service td-agent status</i>
 
-Update /etc/td-agent/td-agent.conf file (This file will have configuration for source and match) <br />
+Create config file logstash_file.conf (This file will have configuration for input, filter and output) <br />
 Have also attached the used configuration.
 
 ## Run 
@@ -55,21 +50,7 @@ Start Elastic Search service <br />
 Start Kibana service <br />
 ./[UnzipFilePath]/bin/kibana
 
-Start Fluentd service <br />
-sudo service td-agent start
-  
-****
-Other used commands <br />
-  sudo service td-agent start <br />
-  sudo service td-agent restart <br />
-  sudo service td-agent stop <br />
-  sudo service td-agent status <br />
-  sudo tail -f /var/log/td-agent/td-agent.log
-****  
+./[UnzipFilePath]/bin/logstash -r -f [ConfigFileCreatedAbove] # Need to attach the configuration with the logstach<br /> 
 
 Execute below command to do all the above steps through shell <br />
-sudo bash execute.sh "[Python File]" "[Log Path]"
-
-
-Credits - https://www.youtube.com/watch?v=dgxEY6V5gtc
-
+sudo bash execute_logstash.sh "[Python File]" "[Full Log Path]" ["Config File Created Above"]
