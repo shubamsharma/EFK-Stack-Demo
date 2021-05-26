@@ -57,11 +57,11 @@ Start fluentd service <br />
 sudo service td-agent start
 
 ******
-  Some other used commands
-  sudo service td-agent start
-  sudo service td-agent stop
-  sudo service td-agent restart
-  sudo service td-agent status
+  Some other used commands <br />
+  sudo service td-agent start <br />
+  sudo service td-agent stop <br />
+  sudo service td-agent restart <br />
+  sudo service td-agent status <br />
   sudo tail -f /var/log/td-agent/td-agent.log
 
 Execute below command to do all the above steps through shell <br />
