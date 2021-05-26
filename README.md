@@ -41,9 +41,32 @@ elasticsearch.hosts: ["http://localhost:9200"]
 ****
 Default host url for Kibana - http://localhost:5601
 
-### Fluentd
+#### Fluentd
 You can check with status on fluentd using below command <br />
 <i>sudo service td-agent status</i>
+
+Update /etc/td-agent/td-agent.conf file (This file will have configuration for source and match) <br />
+Have also attached the used configuration.
+
+### Run 
+Start Elastic Search service <br />
+./<UnzipPath>/bin/elasticsearch
+
+Start Kibana service <br />
+./<UnzipPath>/bin/kibana
+
+Start Fluentd service <br />
+sudo service td-agent start
+  
+****
+Other used commands
+  sudo service td-agent start
+  sudo service td-agent restart
+  sudo service td-agent stop
+  sudo service td-agent status
+****  
+
+
 
 
 
