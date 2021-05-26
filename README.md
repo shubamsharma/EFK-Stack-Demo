@@ -67,8 +67,8 @@ Other used commands <br />
   sudo tail -f /var/log/td-agent/td-agent.log
 ****  
 
-Execute below command to do all the above steps through shell 
-sudo bash execute.sh "<Python File>" "<Log Path>"
+Execute below command to do all the above steps through shell <br />
+sudo bash execute.sh "[Python File]" "[Log Path]"
 
 
 
