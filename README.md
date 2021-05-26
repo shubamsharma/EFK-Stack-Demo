@@ -50,20 +50,21 @@ Have also attached the used configuration.
 
 ### Run 
 Start Elastic Search service <br />
-./<UnzipPath>/bin/elasticsearch
+./[UnzipFilePath]/bin/elasticsearch
 
 Start Kibana service <br />
-./<UnzipPath>/bin/kibana
+./[UnzipFilePath]/bin/kibana
 
 Start Fluentd service <br />
 sudo service td-agent start
   
 ****
-Other used commands
-  sudo service td-agent start
-  sudo service td-agent restart
-  sudo service td-agent stop
-  sudo service td-agent status
+Other used commands <br />
+  sudo service td-agent start <br />
+  sudo service td-agent restart <br />
+  sudo service td-agent stop <br />
+  sudo service td-agent status <br />
+  sudo tail -f /var/log/td-agent/td-agent.log
 ****  
 
 
